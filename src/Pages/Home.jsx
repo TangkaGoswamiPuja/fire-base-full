@@ -1,9 +1,15 @@
 import React from 'react';
+import Navbar from './Navbar';
+import Banner from './Banner';
+import EstatesCard from './EstatesCard';
 
 const Home = () => {
     return (
         <div >
-           <h2 className='text-2xl '> this is home</h2> 
+           
+            home home
+            <Banner></Banner>
+            <EstatesCard></EstatesCard>
         </div>
     );
 };
