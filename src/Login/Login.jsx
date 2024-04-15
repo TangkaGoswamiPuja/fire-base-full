@@ -1,11 +1,52 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 const Login = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => console.log(data);
+    console.log(errors);
     return (
         <div>
-            tis is login
-            <Link to="/register">go regi</Link>
+            <div className="hero min-h-screen bg-base-200">
+
+                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                        <h2>please login</h2>
+                        <div className="form-control">
+
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <input type="email" placeholder="email" name="email" className="input input-bordered" required {...register("email")} />
+
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Password</span>
+                            </label>
+                            <input type="password" placeholder="password" name="password" className="input input-bordered" {...register("password",{
+     required: {
+        value: true,
+ message: "You must fill this input"},
+minLength:{
+    value:6, message:"This inputs value must be at least 6 characters"
+},
+pattern:{
+    value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+    message: " must be use lower case and uppercae"
+} })}
+ />
+                            <div>{errors.password && <p className='text-red-500'>{errors.password.message}</p>}</div>
+
+                        </div>
+                        <div className="form-control mt-6">
+                            <button className="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                    <p className="text-center mb-5">don't have a account? <Link to="/register">plz register</Link></p>
+                </div>
+            </div>
         </div>
     );
 };
