@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { AuthContext } from '../AuthFile/Auth';
 
 const Regis = () => {
+   const {createUser}= useContext(AuthContext)
+
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const on2Submit = data => console.log(data);
+    const on2Submit = data => {console.log(data);
     console.log(errors);
+    createUser(data.email,data.password)
+    .then(result =>{
+        console.log(result.user)
+    })
+    .catch(error=>{console.error(error)})}
     return (
         <div>
              <div className="hero min-h-screen bg-base-200">
@@ -34,7 +42,8 @@ const Regis = () => {
                    value: true,
             message: "You must fill this input"}})} />
             <div>{errors.photo && <p className='text-red-500'>{errors.photo.message}</p>}</div> 
-        </div><div className="form-control">
+        </div>
+        <div className="form-control">
 
             <label className="label">
                 <span className="label-text">Email</span>
