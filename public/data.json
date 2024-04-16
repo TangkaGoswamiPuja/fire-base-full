@@ -1,0 +1,116 @@
+ [
+      {
+        "id": 1,
+        "estate_title": "Cozy Suburban Home",
+        "segment_name": "Residential",
+        "description": "A charming suburban home with three bedrooms, a spacious backyard, and a modern kitchen.",
+        "price": "$350,000",
+        "status": "sale",
+        "image": "https://i.ibb.co/pQ9fmQD/melvasco-lifeofpix-melvasco-310721.jpg",
+        "area": "2000 sq ft",
+        "location": "Suburban neighborhood",
+        "facilities": ["living room", "swimming pool", "kitchen"],
+        "view_property_button": "View Property"
+      },
+      {
+        "id": 2,
+        "estate_title": "Luxury Apartment",
+        "segment_name": "Residential",
+        "description": "A luxurious apartment with breathtaking city views, high-end amenities, and 24/7 concierge service.",
+        "price": "$5,000/month",
+        "status": "rent",
+        "image": "https://i.ibb.co/LzRLpHm/enrico35mm-lifeofpix-enrico35mm-310622.jpg",
+        "area": "1500 sq ft",
+        "location": "City Center",
+        "facilities": ["living room", "gym", "rooftop terrace"],
+        "view_property_button": "View Property"
+      },
+      {
+        "id": 3,
+        "estate_title": "Family-Friendly House",
+        "segment_name": "Residential",
+        "description": "A spacious family-friendly house with a large backyard, multiple bedrooms, and a playroom for kids.",
+        "price": "$420,000",
+        "status": "sale",
+        "image": "https://i.ibb.co/TRC66RZ/alex-mathieu-lifeofpix-alexmathieu-310791.jpg",
+        "area": "2500 sq ft",
+        "location": "Suburban neighborhood",
+        "facilities": ["living room", "backyard", "playroom"],
+        "view_property_button": "View Property"
+      },
+      {
+        "id": 4,
+        "estate_title": "Modern Townhouse",
+        "segment_name": "Residential",
+        "description": "A sleek and modern townhouse with open-plan living, high ceilings, and a rooftop terrace.",
+        "price": "$550,000",
+        "status": "sale",
+        "image": "https://i.ibb.co/hCF7b00/pexels-pixabay-271743.jpg",
+        "area": "1800 sq ft",
+        "location": "Urban area",
+        "facilities": ["living room", "rooftop terrace", "modern kitchen"],
+        "view_property_button": "View Property"
+      },
+
+      {
+        "id": 5,
+        "estate_title": "Riverside Cottage",
+        "segment_name": "Residential",
+        "description": "A cozy cottage nestled by the riverside, perfect for nature lovers seeking tranquility.",
+        "price": "$280,000",
+        "status": "sale",
+        "image": "https://i.ibb.co/Ky5Sq1h/pexels-freemockupsorg-775219.jpg",
+        "area": "1500 sq ft",
+        "location": "Riverside",
+        "facilities": ["living room", "backyard", "fireplace"]
+      },
+      {
+        "id": 6,
+        "estate_title": "Mountain Retreat",
+        "segment_name": "Residential",
+        "description": "A secluded mountain retreat with stunning views, ideal for those seeking an escape from the city.",
+        "price": "$400,000",
+        "status": "sale",
+        "image": "https://i.ibb.co/3zts8r8/pexels-pixabay-262048.jpg",
+        "area": "2200 sq ft",
+        "location": "Mountain",
+        "facilities": ["living room", "deck", "hiking trails"]
+      },
+      {
+        "id": 7,
+        "estate_title": "Beachfront Villa",
+        "segment_name": "Residential",
+        "description": "A luxurious beachfront villa with direct access to the beach and panoramic ocean views.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "image": "https://i.ibb.co/Tcrb7ZJ/pexels-jonathan-borba-3255245.jpg",
+        "area": "3000 sq ft",
+        "location": "Beachfront",
+        "facilities": ["living room", "swimming pool", "private beach access"]
+      },
+      {
+        "id": 8,
+        "estate_title": "Urban Loft",
+        "segment_name": "Residential",
+        "description": "A chic urban loft in the heart of the city, featuring exposed brick walls and industrial-style decor.",
+        "price": "$600,000",
+        "status": "sale",
+        "image": "https://i.ibb.co/4VT7Kn0/pexels-roberto-nickson-2659629.jpg",
+        "area": "1800 sq ft",
+        "location": "City Center",
+        "facilities": ["open-plan living", "city views", "modern kitchen"]
+      },
+      {
+        "id": 9,
+        "estate_title": "Lake House Retreat",
+        "segment_name": "Residential",
+        "description": "A serene lake house retreat surrounded by lush forests, offering a peaceful getaway.",
+        "price": "$350,000",
+        "status": "sale",
+        "image": "https://i.ibb.co/ckD3ZdN/pexels-hristo-sahatchiev-821357.jpg",
+        "area": "2000 sq ft",
+        "location": "Lakeside",
+        "facilities": ["living room", "dock", "canoe"]
+      }
+    ]
+  
