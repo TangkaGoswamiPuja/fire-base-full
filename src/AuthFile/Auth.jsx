@@ -24,19 +24,24 @@ const Auth = ({children}) => {
     []);
     console.log(year,homes)
     const [user , setUser] = useState(null)
+    const [load , setLoad] = useState(true)
      const createUser = (email ,password)=>{
+        setLoad(true);
         return createUserWithEmailAndPassword(auth,email,password)
      }
      const signIn =(email,password)=>{
+        setLoad(true);
         return signInWithEmailAndPassword(auth , email, password)
      }
  const logOut = ()=>{
+    setLoad(true);
     return signOut(auth);
  }
      useEffect(()=>{
        const unSubscribe= onAuthStateChanged(auth , currentUser =>{
             console.log("user in the auth state changed", currentUser)
             setUser(currentUser);
+            setLoad(false)
         });
         return()=> {unSubscribe()}
      },[])
@@ -44,6 +49,7 @@ const Auth = ({children}) => {
  const authInfo={homes,
    year,
     user,
+    load,
 createUser,
 signIn,
 logOut,

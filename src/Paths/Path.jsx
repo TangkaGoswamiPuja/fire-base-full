@@ -1,11 +1,13 @@
 import {
-    createBrowserRouter} from "react-router-dom";
+    createBrowserRouter
+} from "react-router-dom";
 import Root from "../Layout/Root";
 import Home from "../Pages/Home";
 import Login from "../Login/Login";
 import Regis from "../Login/Regis";
 import Details from "../Pages/Details";
 import Squar from "../Pages/Squar";
+import Private from "../AuthFile/Private";
 
 
 const router = createBrowserRouter([
@@ -14,24 +16,24 @@ const router = createBrowserRouter([
         element: <Root></Root>,
         children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path:'/details/:id',
-                element:<Details></Details>
+                path: '/details/:id',
+                element: <Private> <Details></Details> </Private>
             },
             {
-                path:"/sq",
-                element: <Squar></Squar>
+                path: "/sq",
+                element: <Private> <Squar></Squar></Private>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Regis></Regis>
+                path: '/register',
+                element: <Regis></Regis>
             }
         ]
     },

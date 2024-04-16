@@ -1,11 +1,15 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import  { useContext } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../AuthFile/Auth';
-import Result from 'postcss/lib/result';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const {signIn} = useContext(AuthContext)
+    const location = useLocation();
+    console.log('show',location)
+    const navi = useNavigate()
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {console.log(data);
@@ -14,6 +18,9 @@ const Login = () => {
 signIn(data.email, data.password)
 .then(result=>{
     console.log(result.user)
+    if(user){toast('Login successful!');}
+    
+    navi(location?.state ? location.state:'/')
 })
 .catch(error=>{console.error(error)})
 }
@@ -58,6 +65,8 @@ pattern:{
                     <p className="text-center mb-5">don't have a account? <Link to="/register">plz register</Link></p>
                 </div>
             </div>
+                         <ToastContainer />
+
         </div>
     );
 };

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { AuthContext } from '../AuthFile/Auth';
 
 const Details = () => {
-    const{homes} = useContext(AuthContext)
+    const{homes } = useContext(AuthContext)
     const {id} =useParams()
     const idInt = parseInt(id)
     const detail = homes.find(detail => detail.id === idInt)
