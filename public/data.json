@@ -7,10 +7,17 @@
         "price": "$350,000",
         "status": "sale",
         "image": "https://i.ibb.co/pQ9fmQD/melvasco-lifeofpix-melvasco-310721.jpg",
-        "area": "2000 sq ft",
+        "area": 2000,
         "location": "Suburban neighborhood",
         "facilities": ["living room", "swimming pool", "kitchen"],
-        "view_property_button": "View Property"
+       
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "garage": "2-car garage",
+            "year_built": 2010,
+            "amenities": ["gym", "pool","pet_friendly"],
+            "lot_size": "0.5 acres"
+          
       },
       {
         "id": 2,
@@ -20,10 +27,18 @@
         "price": "$5,000/month",
         "status": "rent",
         "image": "https://i.ibb.co/LzRLpHm/enrico35mm-lifeofpix-enrico35mm-310622.jpg",
-        "area": "1500 sq ft",
+        "area": 1500,
         "location": "City Center",
         "facilities": ["living room", "gym", "rooftop terrace"],
-        "view_property_button": "View Property"
+       
+       
+        "garage": "2-car garage",
+            "bedrooms": 2,
+            "bathrooms": 2.5,
+            "year_built": 2019,
+             "amenities": ["gym", "pool", "sauna","pet_friendly"],
+             "lot_size": "0.5 acres"
+          
       },
       {
         "id": 3,
@@ -33,10 +48,17 @@
         "price": "$420,000",
         "status": "sale",
         "image": "https://i.ibb.co/TRC66RZ/alex-mathieu-lifeofpix-alexmathieu-310791.jpg",
-        "area": "2500 sq ft",
+        "area": 2500,
         "location": "Suburban neighborhood",
         "facilities": ["living room", "backyard", "playroom"],
-        "view_property_button": "View Property"
+       
+            "bedrooms": 4,
+            "bathrooms": 2.5,
+            "garage": "3-car garage",
+            "year_built": 2008,
+            "amenities": ["gym", "sauna","pet_friendly"],
+            "lot_size": "0.5 acres"
+          
       },
       {
         "id": 4,
@@ -46,10 +68,18 @@
         "price": "$550,000",
         "status": "sale",
         "image": "https://i.ibb.co/hCF7b00/pexels-pixabay-271743.jpg",
-        "area": "1800 sq ft",
+        "area": 1800 ,
         "location": "Urban area",
         "facilities": ["living room", "rooftop terrace", "modern kitchen"],
-        "view_property_button": "View Property"
+        
+            "bedrooms": 3,
+            "bathrooms": 2.5,
+            "garage": "Attached garage",
+            "year_built": 2015,
+            "lot_size": "0.15 acres",
+            "amenities": [ "pool", "sauna","pet_friendly"]
+
+
       },
 
       {
@@ -60,9 +90,17 @@
         "price": "$280,000",
         "status": "sale",
         "image": "https://i.ibb.co/Ky5Sq1h/pexels-freemockupsorg-775219.jpg",
-        "area": "1500 sq ft",
+        "area": 1500 ,
         "location": "Riverside",
-        "facilities": ["living room", "backyard", "fireplace"]
+        "facilities": ["living room", "backyard", "fireplace"],
+       
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "garage": "None",
+            "year_built": 1995,
+            "lot_size": "0.5 acres",
+            "amenities": ["gym", "pool", "sauna"]
+
       },
       {
         "id": 6,
@@ -72,9 +110,17 @@
         "price": "$400,000",
         "status": "sale",
         "image": "https://i.ibb.co/3zts8r8/pexels-pixabay-262048.jpg",
-        "area": "2200 sq ft",
+        "area": 2200 ,
         "location": "Mountain",
-        "facilities": ["living room", "deck", "hiking trails"]
+        "facilities": ["living room", "deck", "hiking trails"],
+       
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "garage": "None",
+            "year_built": 2002,
+            "lot_size": "5 acres",
+            "amenities": ["gym", "pet_friendly"]
+
       },
       {
         "id": 7,
@@ -84,9 +130,18 @@
         "price": "$1,200,000",
         "status": "sale",
         "image": "https://i.ibb.co/Tcrb7ZJ/pexels-jonathan-borba-3255245.jpg",
-        "area": "3000 sq ft",
+        "area": 3000 ,
         "location": "Beachfront",
-        "facilities": ["living room", "swimming pool", "private beach access"]
+        "facilities": ["living room", "swimming pool", "private beach access"],
+       
+            "bedrooms": 5,
+            "bathrooms": 4,
+            "garage": "Attached garage",
+            "year_built": 2018,
+            "lot_size": "0.75 acres",
+            "amenities": [ "sauna","pet_friendly"]
+
+          
       },
       {
         "id": 8,
@@ -96,9 +151,18 @@
         "price": "$600,000",
         "status": "sale",
         "image": "https://i.ibb.co/4VT7Kn0/pexels-roberto-nickson-2659629.jpg",
-        "area": "1800 sq ft",
+        "area": 1800,
         "location": "City Center",
-        "facilities": ["open-plan living", "city views", "modern kitchen"]
+        "facilities": ["open-plan living", "city views", "modern kitchen"],
+       
+       
+        "garage": "Attached garage",
+            "bedrooms": 1,
+            "bathrooms": 1.5,
+           
+            "lot_size": "1 acre",
+            "amenities": ["rooftop pool", "gym", "concierge"],
+            "year_built": 2005
       },
       {
         "id": 9,
@@ -108,9 +172,18 @@
         "price": "$350,000",
         "status": "sale",
         "image": "https://i.ibb.co/ckD3ZdN/pexels-hristo-sahatchiev-821357.jpg",
-        "area": "2000 sq ft",
+        "area": 2000 ,
         "location": "Lakeside",
-        "facilities": ["living room", "dock", "canoe"]
+        "facilities": ["living room", "dock", "canoe"],
+       
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "garage": "Attached garage",
+            "year_built": 2005,
+            "lot_size": "1 acre",
+            "amenities": ["concierge", "sauna","pet_friendly"]
+
+          
       }
     ]
   

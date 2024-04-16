@@ -9,6 +9,20 @@ export const AuthContext = createContext(null)
 const auth = getAuth(app)
 const Auth = ({children}) => {
 
+    const [homes , setHomes] = useState([]);
+    const [year , setYear] = useState([]);
+    useEffect(()=>{
+        fetch("./data.json")
+        .then ((res)=>res.json())
+        .then((data)=>{
+            setHomes(data);
+            const sq = [...data].sort((a,b)=>b.year_built - a.year_built);
+            setYear(sq);
+          
+        });
+    },
+    []);
+    console.log(year,homes)
     const [user , setUser] = useState(null)
      const createUser = (email ,password)=>{
         return createUserWithEmailAndPassword(auth,email,password)
@@ -27,7 +41,8 @@ const Auth = ({children}) => {
         return()=> {unSubscribe()}
      },[])
 
- const authInfo={
+ const authInfo={homes,
+   year,
     user,
 createUser,
 signIn,
