@@ -1,6 +1,6 @@
-<h1>Dream home </h1>
 
-# YourWebsite
+
+# Dream Home
 
 ## Description
 YourWebsite is a web application that allows users to register, login, update their profile, and access various features of the website. It provides authentication using email/password and social login options.
