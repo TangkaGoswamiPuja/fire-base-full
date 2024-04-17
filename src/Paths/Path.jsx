@@ -9,7 +9,7 @@ import Details from "../Pages/Details";
 import Squar from "../Pages/Squar";
 import Private from "../AuthFile/Private";
 import Update from "../Pages/Update";
-import Profile from "../../Profile";
+import Profile from "../Pages/Profile";
 import Error from "../Pages/Error";
 
 
