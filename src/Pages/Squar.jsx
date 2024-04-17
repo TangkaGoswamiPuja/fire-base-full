@@ -7,7 +7,7 @@ const Squar = () => {
     const { year } = useContext(AuthContext)
     console.log(year)
     return (
-        <div>
+        <div className="mt-40 lg:mt-10">
             <Helmet>
                 <title>
                     Year

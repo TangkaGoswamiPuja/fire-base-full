@@ -14,7 +14,9 @@ const Home = () => {
            <Helmet>
             <title>Dream Home | Home</title>
            </Helmet>
-            <Banner></Banner>
+          
+           <Banner></Banner>
+          
 <div className='grid grid-cols-1 lg:grid-cols-1 gap-5'>
 
             {

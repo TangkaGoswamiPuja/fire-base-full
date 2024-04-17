@@ -28,6 +28,7 @@ const handelGulu= ()=>{
     signInGoogle()
     .then(result=>{
         console.log(result.user)
+        navi(location?.state ? location.state:'/')
     })
     .catch(error=>{
         console.error(error)
@@ -37,6 +38,7 @@ const handelGit= ()=>{
     gitHub()
     .then(result=>{
         console.log(result.user)
+        navi(location?.state ? location.state:'/')
     })
     .catch(error=>{
         console.error(error)
@@ -44,7 +46,7 @@ const handelGit= ()=>{
 }
 
     return (
-        <div>
+        <div className='mt-16 mb-10'>
             <Helmet>
                 <title>
                     Login
@@ -54,7 +56,7 @@ const handelGit= ()=>{
 
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                        <h2>please login</h2>
+                        <h2 className='text-3xl font-bold bg-cyan-100 rounded-lg p-3'>Please Login</h2>
                         <div className="form-control">
 
                             <label className="label">
@@ -83,12 +85,12 @@ pattern:{
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-info btn-outline">Login</button>
                         </div>
                     </form>
-                    <p className="text-center mb-5">don't have a account? <Link to="/register">plz register</Link></p>
-                    <p className="text-center mb-5"><button onClick={handelGulu} className='btn btn-primary'>sign with GOOGLE</button></p>
-                    <p className="text-center mb-5"><button onClick={handelGit} className='btn btn-primary'>sign with GitHub</button></p>
+                    <p className="text-center mb-5">don't have a account? <Link className='link text-cyan-400' to="/register">plz register</Link></p>
+                    <p className="text-center mb-5"><button onClick={handelGulu} className='btn btn-info btn-outline'>sign with GOOGLE</button></p>
+                    <p className="text-center mb-5"><button onClick={handelGit} className='btn btn-info btn-outline'>sign with GitHub</button></p>
 
                 </div>
             </div>

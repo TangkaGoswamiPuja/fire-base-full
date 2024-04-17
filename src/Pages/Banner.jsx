@@ -18,7 +18,7 @@ const Banner = () => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
     return (
-        <>
+        <div className='mt-36 mb-7  lg:mt-10 '>
              <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -35,13 +35,14 @@ const Banner = () => {
         className="mySwiper"
       >
           {/* 1st */}
-          <SwiperSlide><div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/BNGg0wD/pexels-pixabay-237371.jpg)'}}>
+          <SwiperSlide className='rounded-xl'><div  className="hero min-h-screen " style={{backgroundImage: 'url(https://i.ibb.co/BNGg0wD/pexels-pixabay-237371.jpg)'}}>
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="mb-5 text-5xl font-bold">Your dream home is
+our top priority</h1>
+      <p className="mb-5">And In Order To Make A Business, Brand Advertising And Marketing Plays An Important Role. Similarly, In Making Cultivation Business A Brand, Good Slogans Are Necessary.</p>
+      <button className="btn btn-info text-white">Discover More</button>
     </div>
   </div>
 </div></SwiperSlide>
@@ -51,9 +52,10 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="mb-5 text-5xl font-bold">Your dream home is
+our top priority</h1>
+      <p className="mb-5">And In Order To Make A Business, Brand Advertising And Marketing Plays An Important Role. Similarly, In Making Cultivation Business A Brand, Good Slogans Are Necessary.</p>
+      <button className="btn btn-info text-white">Discover More</button>
     </div>
   </div>
 </div></SwiperSlide>
@@ -64,9 +66,10 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="mb-5 text-5xl font-bold">Your dream home is
+our top priority</h1>
+      <p className="mb-5">And In Order To Make A Business, Brand Advertising And Marketing Plays An Important Role. Similarly, In Making Cultivation Business A Brand, Good Slogans Are Necessary.</p>
+      <button className="btn btn-info text-white">Discover More</button>
     </div>
   </div>
 </div></SwiperSlide>
@@ -77,9 +80,10 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="mb-5 text-5xl font-bold">Your dream home is
+our top priority</h1>
+      <p className="mb-5">And In Order To Make A Business, Brand Advertising And Marketing Plays An Important Role. Similarly, In Making Cultivation Business A Brand, Good Slogans Are Necessary.</p>
+      <button className="btn btn-info text-white">Discover More</button>
     </div>
   </div>
 </div></SwiperSlide>
@@ -90,9 +94,10 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="mb-5 text-5xl font-bold">Your dream home is
+our top priority</h1>
+      <p className="mb-5">And In Order To Make A Business, Brand Advertising And Marketing Plays An Important Role. Similarly, In Making Cultivation Business A Brand, Good Slogans Are Necessary.</p>
+      <button className="btn btn-info text-white">Discover More</button>
     </div>
   </div>
 </div></SwiperSlide>
@@ -102,9 +107,10 @@ const Banner = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="mb-5 text-5xl font-bold">Your dream home is
+our top priority</h1>
+      <p className="mb-5">And In Order To Make A Business, Brand Advertising And Marketing Plays An Important Role. Similarly, In Making Cultivation Business A Brand, Good Slogans Are Necessary.</p>
+      <button className="btn btn-info text-white">Discover More</button>
     </div>
   </div>
 </div></SwiperSlide>
@@ -117,7 +123,7 @@ const Banner = () => {
           <span ref={progressContent}></span>
         </div>
       </Swiper>
-        </>
+        </div>
     );
 };
 

@@ -30,7 +30,7 @@ const Regis = () => {
         setRegError(error.message)
     })}
     return (
-        <div>
+        <div className='mt-16 mb-10'>
             <Helmet>
                 <title>
                     Register
@@ -40,7 +40,7 @@ const Regis = () => {
 
 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 <form onSubmit={handleSubmit(on2Submit)} className="card-body">
-        <h2>please login</h2>
+        <h2  className='text-3xl font-bold bg-cyan-100 rounded-lg p-3'>Register Please</h2>
         <div className="form-control">
 
             <label className="label">
@@ -55,7 +55,7 @@ const Regis = () => {
         <div className="form-control">
 
             <label className="label">
-                <span className="label-text">photo url </span>
+                <span className="label-text">Photo url </span>
             </label>
             <input type="text" placeholder="photo url" name="photo" className="input input-bordered"  {...register("photo",{
                 required: {
@@ -108,7 +108,7 @@ const Regis = () => {
            
         </div>
         <div className="form-control mt-6">
-            <button className="btn btn-primary">Register</button>
+            <button className="btn btn-info btn-outline">Register</button>
         </div>
     </form>
     {
@@ -117,7 +117,7 @@ const Regis = () => {
     {
         regS && <p>{regS}</p>
     }
-    <p className="text-center mb-5">Already have a account? <Link to="/login">plz login</Link></p>
+    <p className="text-center mb-5">Already have a account? <Link className='link text-cyan-400' to="/login">plz login</Link></p>
 </div>
 </div>
 <ToastContainer />
