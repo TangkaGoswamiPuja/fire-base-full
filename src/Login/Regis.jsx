@@ -20,11 +20,11 @@ const Regis = () => {
     console.log(errors);
   
     setRegError('')
-    setRegS('')
+  
     createUser(data.email,data.password)
     .then(result =>{
         console.log(result.user)
-        setRegS(toast("Registration successful !"))
+        toast("Registration successful !")
     })
     .catch(error=>{console.error(error)
         setRegError(error.message)
@@ -114,9 +114,9 @@ const Regis = () => {
     {
         regError && <p className='p-5 text-red-600'>{regError}</p>
     }
-    {
+    {/* {
         regS && <p>{regS}</p>
-    }
+    } */}
     <p className="text-center mb-5">Already have a account? <Link className='link text-cyan-400' to="/login">plz login</Link></p>
 </div>
 </div>
