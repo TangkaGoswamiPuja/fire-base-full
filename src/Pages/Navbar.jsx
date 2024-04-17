@@ -13,8 +13,10 @@ const Navbar = () => {
   
     const links = <>
     <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to='/update'>Update Profile</NavLink></li>
-    <li><NavLink to='/user'>user profile</NavLink></li>
+   {user&&
+   <> <li><NavLink to='/update'>Update Profile</NavLink></li>
+   <li><NavLink to='/user'>user profile</NavLink></li></>
+   }
     <li><NavLink to='/sq'>Year</NavLink></li>
 
 
@@ -41,12 +43,16 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+  
+    {user? 
+    <>
+    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img alt="" src={user.photoURL}/>
         </div>
       </div>
-    {user? <button onClick={handleSignout} className="btn">SignOut</button>:     <Link to="/login" className="btn">Login</Link>
+    <button onClick={handleSignout} className="btn">SignOut</button></>
+    :     <Link to="/login" className="btn">Login</Link>
 }
     
   </div>

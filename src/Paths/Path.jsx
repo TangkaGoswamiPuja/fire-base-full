@@ -8,6 +8,8 @@ import Regis from "../Login/Regis";
 import Details from "../Pages/Details";
 import Squar from "../Pages/Squar";
 import Private from "../AuthFile/Private";
+import Update from "../Pages/Update";
+import Profile from "../../Profile";
 
 
 const router = createBrowserRouter([
@@ -34,7 +36,14 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Regis></Regis>
-            }
+            },
+            {
+                path:"/update",
+                element:  <Private> <Update></Update></Private>
+            },
+            {path:"/user",
+        element:  <Private> <Profile></Profile></Private>
+    }
         ]
     },
 ]);

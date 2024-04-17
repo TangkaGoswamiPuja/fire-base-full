@@ -2,11 +2,9 @@ import  { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../AuthFile/Auth';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext)
+    const {signIn , signInGoogle,gitHub} = useContext(AuthContext)
     const location = useLocation();
     console.log('show',location)
     const navi = useNavigate()
@@ -18,12 +16,32 @@ const Login = () => {
 signIn(data.email, data.password)
 .then(result=>{
     console.log(result.user)
-    if(user){toast('Login successful!');}
+   
     
     navi(location?.state ? location.state:'/')
 })
 .catch(error=>{console.error(error)})
 }
+
+const handelGulu= ()=>{
+    signInGoogle()
+    .then(result=>{
+        console.log(result.user)
+    })
+    .catch(error=>{
+        console.error(error)
+    })
+}
+const handelGit= ()=>{
+    gitHub()
+    .then(result=>{
+        console.log(result.user)
+    })
+    .catch(error=>{
+        console.error(error)
+    })
+}
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -63,9 +81,12 @@ pattern:{
                         </div>
                     </form>
                     <p className="text-center mb-5">don't have a account? <Link to="/register">plz register</Link></p>
+                    <p className="text-center mb-5"><button onClick={handelGulu} className='btn btn-primary'>sign with GOOGLE</button></p>
+                    <p className="text-center mb-5"><button onClick={handelGit} className='btn btn-primary'>sign with GitHub</button></p>
+
                 </div>
             </div>
-                         <ToastContainer />
+                        
 
         </div>
     );
