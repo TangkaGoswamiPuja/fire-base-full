@@ -10,12 +10,14 @@ import Squar from "../Pages/Squar";
 import Private from "../AuthFile/Private";
 import Update from "../Pages/Update";
 import Profile from "../../Profile";
+import Error from "../Pages/Error";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement:<Error></Error>,
         children: [
             {
                 path: '/',

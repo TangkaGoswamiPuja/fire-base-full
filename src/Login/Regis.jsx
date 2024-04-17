@@ -1,21 +1,41 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { FaEye,FaEyeSlash} from "react-icons/fa";
+
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../AuthFile/Auth';
+import { ToastContainer, toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from 'react-helmet';
 const Regis = () => {
+    const [regError,setRegError]= useState('')
+    const [regS,setRegS]= useState('')
+    const [show,setShow]= useState(false)
+    
    const {createUser}= useContext(AuthContext)
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const on2Submit = data => {console.log(data);
     console.log(errors);
+  
+    setRegError('')
+    setRegS('')
     createUser(data.email,data.password)
     .then(result =>{
         console.log(result.user)
+        setRegS(toast("Registration successful !"))
     })
-    .catch(error=>{console.error(error)})}
+    .catch(error=>{console.error(error)
+        setRegError(error.message)
+    })}
     return (
         <div>
+            <Helmet>
+                <title>
+                    Register
+                </title>
+            </Helmet>
              <div className="hero min-h-screen bg-base-200">
 
 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -56,7 +76,13 @@ const Regis = () => {
             <label className="label">
                 <span className="label-text">Password</span>
             </label>
-            <input type="password" placeholder="password" name="password" className="input input-bordered" 
+
+
+            <div className='flex gap-2'>
+            <input 
+            type= {show ? "text":"password"} placeholder="password" 
+            name="password" 
+            className="input input-bordered" 
             {...register("password",{
                 required: {
                    value: true,
@@ -69,6 +95,15 @@ const Regis = () => {
                message: " must be use lower case and uppercae"
            } })}
             />
+<span className="mt-3" onClick={()=>setShow(!show)}>
+    {
+    show?
+    <FaEyeSlash  className='text-2xl'/>:
+    <FaEye  className='text-2xl'/>
+}
+
+</span>
+</div>
                                        <div>{errors.password && <p className='text-red-500'>{errors.password.message}</p>}</div> 
            
         </div>
@@ -76,9 +111,16 @@ const Regis = () => {
             <button className="btn btn-primary">Register</button>
         </div>
     </form>
+    {
+        regError && <p className='p-5 text-red-600'>{regError}</p>
+    }
+    {
+        regS && <p>{regS}</p>
+    }
     <p className="text-center mb-5">Already have a account? <Link to="/login">plz login</Link></p>
 </div>
 </div>
+<ToastContainer />
         </div>
     );
 };

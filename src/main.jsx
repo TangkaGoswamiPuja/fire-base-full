@@ -7,7 +7,13 @@ import Auth from './AuthFile/Auth'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Auth>    <RouterProvider router={router} ></RouterProvider>
+     
+   <Auth>   
+     <RouterProvider router={router} ></RouterProvider>
+
+  
 </Auth>
-  </React.StrictMode>,
+
+   
+  </React.StrictMode>
 )

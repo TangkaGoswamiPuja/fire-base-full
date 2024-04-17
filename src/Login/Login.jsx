@@ -2,6 +2,7 @@ import  { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../AuthFile/Auth';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
     const {signIn , signInGoogle,gitHub} = useContext(AuthContext)
@@ -44,6 +45,11 @@ const handelGit= ()=>{
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Login
+                </title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200">
 
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

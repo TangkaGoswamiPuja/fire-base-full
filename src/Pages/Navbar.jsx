@@ -18,6 +18,7 @@ const Navbar = () => {
    <li><NavLink to='/user'>user profile</NavLink></li></>
    }
     <li><NavLink to='/sq'>Year</NavLink></li>
+    <li><NavLink to="/not">Find</NavLink></li>
 
 
        
@@ -42,14 +43,18 @@ const Navbar = () => {
      {links}
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end gap-3">
   
     {user? 
     <>
-    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar dropdown dropdown-hover">
+    
         <div className="w-10 rounded-full">
-          <img alt="" src={user.photoURL}/>
-        </div>
+          <img  alt="" src={user.photoURL}/> </div>
+          <ul  className="dropdown-content p-2 mt-2 border ">
+    <li className="mr-10">{user.email}</li>
+  </ul>
+       
       </div>
     <button onClick={handleSignout} className="btn">SignOut</button></>
     :     <Link to="/login" className="btn">Login</Link>
