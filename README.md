@@ -4,7 +4,7 @@
 ## Description
 #### Dream Home is a web application that allows users to register, login, update their profile, and access various features of the website. It provides authentication using email/password and social login options.
 
-Live Site URL: 
+Live Site URL: (https://th-assignment-6b9bb.web.app/)
 
 ## Features
 - User Authentication:
