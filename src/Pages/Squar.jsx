@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 
 const Squar = () => {
     const { year } = useContext(AuthContext)
-    console.log(year)
+    // console.log(year)
     return (
         <div className="mt-40 lg:mt-10">
             <Helmet>

@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from 'react-helmet';
+import { updateProfile } from 'firebase/auth';
 const Regis = () => {
     const [regError,setRegError]= useState('')
     const [regS,setRegS]= useState('')
@@ -21,10 +22,19 @@ const Regis = () => {
   
     setRegError('')
   
-    createUser(data.email,data.password)
+    createUser(data.email,data.password )
     .then(result =>{
         console.log(result.user)
         toast("Registration successful !")
+        // update
+updateProfile(result.user ,
+    {displayName:data.names,
+   photoURL: data.photo,
+ } 
+)
+.then(()=>{
+    alert('profile update')})
+.catch()
     })
     .catch(error=>{console.error(error)
         setRegError(error.message)
@@ -46,7 +56,7 @@ const Regis = () => {
             <label className="label">
                 <span className="label-text">Name</span>
             </label>
-            <input type="text" placeholder="name" name="name" className="input input-bordered"  {...register("name",{
+            <input type="text" placeholder="name" name="names" className="input input-bordered"  {...register("names",{
                 required: {
                    value: true,
             message: "You must fill this input"}})} />
